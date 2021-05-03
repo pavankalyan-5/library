@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='slogin.css'>
+    <script src='main.js'></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+    <script>
+        document.getElementById('login-form').style.display='block';
+    </script>
+    <style>
+        ::placeholder
+        {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><button onclick="location.replace('mainpage.html')" class="loginbtn" style="width: auto;">Home</button>
+                    <li><button class="loginbtn" style="width: auto;">About Us</button>
+                    <li><button class="loginbtn" style="width: auto;">Contact</button>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            
+                <h1>E-Library</h1>
+            
+        </div>
+            <div id="login-form" class="login-page">
+                <div class="form-box">
+                    <div class="button-box">
+                    
+                        <span id="at"><b>Admin</b></span>
+                        
+                    
+                    </div>
+                    <form id='login' class="input-group-login">
+                        <input type='text' class="input-field" placeholder="Enter your Reg No" required>
+                        <input type='password'  class="input-field" placeholder="Enter Password" required>
+                        <input type="checkbox" class="check-box"><span>Remember Password</span>
+                        <button type="submit" class="submit-btn">Log in</button>
+
+                    </form>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

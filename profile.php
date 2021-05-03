@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
@@ -222,12 +225,13 @@ body{
             <h2>Sidebar</h2>
             <form action="home.php" method="post">
             <ul>
-                <li><a href="home.php"><i class="fas fa-home"></i>Home</a></li>
-                <li><a href="Profile"><i class="fas fa-user"></i>Profile</a></li>
-                <li><a href="addbook.php"><i style="padding-right:10px;" class="fas fa fa-plus"></i>Add Book</a></li>
-                <li><a href="deletebook.php"><i style="padding-right:10px;" class="fas fa fa-minus"></i>Delete Book</a></li>
-                <li><a href="#"><i class="fas fa fa-info"></i>Details</a></li>
-                <li><a href="request.php"><i class="fas fa-address-book"></i>Request</a></li>
+            <li><a href="studentpage1.php"><i style="padding-right:10px;"class="fas fa-home"></i>Home</a</li>
+            <li><a href="profile.php"><i style="padding-right:10px;"class="fas fa-user"></i>Profile</a></li>
+            <li><a href="about.php"><i style="padding-right:10px;"class="fas fa-address-card"></i>About</a></li>
+            <li><a href="search.php"><i style="padding-right:10px;" class="fas fa fa-search"></i>Search</a></li>
+
+            <li><a href="fine.php"><i style="padding-right:10px;"class="fas fa fa-money"></i>Fine</a></li>
+            <li><a href="request.php"><i style="padding-right:10px;"class="fas fa-address-book"></i>Request</a></li>
             </ul>
             </form>
 
@@ -243,38 +247,56 @@ body{
 
 <div class="wrapper1">
     <div class="left">
-        <img src="https://i.imgur.com/cMy8V5j.png" alt="user" width="100">
-        <h4>Alex William</h4>
-         <p>UI Developer</p>
+        <img src="https://i.pinimg.com/564x/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg" alt="user" width="100">
+        <h4><?php  echo $_SESSION['stu_name']?></h4>
+         <p><?php  echo $_SESSION['stu_reg']?></p>
     </div>
+    <?php
+    $con=mysqli_connect('localhost','root','','library');
+    if(!$con)
+    {
+        echo "problem in connecting database";
+    }
+    $reg=$_SESSION['stu_reg'];
+    $s="select * from login where regno='$reg'";
+    $qu=mysqli_query($con,$s);
+    $row=mysqli_fetch_assoc($qu);
+
+    ?>
     <div class="right">
         <div class="info">
-            <h3>Information</h3>
+            <h3>about</h3>
             <div class="info_data">
                  <div class="data">
                     <h4>Email</h4>
-                    <p>alex@gmail.com</p>
-                 </div>
-                 <div class="data">
-                   <h4>Phone</h4>
-                    <p>0001-213-998761</p>
+                    <p><?php  echo $row['email']?></p>
+                 
+                   <h4>Fine</h4>
+                    <p><?php  echo $row['fine']?></p>
+                    <h4>Branch</h4>
+                    <p>
+                        <?php  
+                            $s=substr($row['regno'],7,2);
+                            if ($s=='10')
+                            echo "CSE";
+                            else if($s=='12')
+                            echo "ECE";
+                        ?>
+                    </p>
+                    <h4>Year</h4>
+                    <p>
+                        <?php  
+                            $s=strrev(substr($row['regno'],2,2));
+                            $y=date('y');
+                            $s=(int)($y)-(int)($s);
+                            echo $s;
+                        ?>
+                    </p>
               </div>
             </div>
         </div>
       
-      <div class="projects">
-            <h3>Projects</h3>
-            <div class="projects_data">
-                 <div class="data">
-                    <h4>Recent</h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                 </div>
-                 <div class="data">
-                   <h4>Most Viewed</h4>
-                    <p>dolor sit amet.</p>
-              </div>
-            </div>
-        </div>
+      
       
     </div>
 </div>
