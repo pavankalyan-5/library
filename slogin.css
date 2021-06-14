@@ -206,6 +206,10 @@ span
 {
     left: 50px;
 }
+#login a{
+    text-decoration: none;
+    color: white;
+}
 #login input
 {
     color: white;
