@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    /*****************
+    - Header -
+*****************/
+header {
+    position:relative;
+    left:0;
+    top:0;
+    width:100%;
+    min-height:120px;
+    padding:50px 0;
+    color:#fff;
+    background-color: rgb(46, 31, 26);
+    color: #FFD700;
+    margin-bottom:30px
+}
+
+/* Logo */
+header .logo {
+    clear:both;
+    display:block;
+    text-align:center;
+    padding-bottom:10px;
+}
+
+/* Title */
+header h1 {
+    font-weight:300;
+    font-size:24px;
+    color:#eee; 
+    letter-spacing:2px;
+    text-align:center;
+    text-transform:uppercase;
+    margin:0 !important;
+    padding-bottom:25px;
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Open Sans:400,600,800');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+input,
+p,
+a {
+    font-family: "Open Sans";
+    margin: 0px;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+}
+
+body {
+    background-color: #F1F2F3;
+}
+
+.container-fluid,
+.container {
+    max-width: 1200px;
+}
+
+.card-container {
+    padding: 100px 0px;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
+
+.profile-card-4 {
+    max-width: 300px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-card-4 img {
+    transition: all 0.25s linear;
+}
+
+.profile-card-4 .profile-content {
+    position: relative;
+    padding: 15px;
+    background-color: #FFF;
+}
+
+.profile-card-4 .profile-name {
+    font-weight: bold;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: -70px;
+    color: #FFF;
+    font-size: 17px;
+}
+
+.profile-card-4 .profile-name p {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.profile-card-4 .profile-description {
+    color: #777;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.profile-card-4 .profile-overview {
+    padding: 15px 0px;
+}
+
+.profile-card-4 .profile-overview p {
+    font-size: 10px;
+    font-weight: 600;
+    color: #777;
+}
+
+.profile-card-4 .profile-overview h4 {
+    color: #273751;
+    font-weight: bold;
+}
+
+.profile-card-4 .profile-content::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    top: -10px;
+    left: 0px;
+    right: 0px;
+    background-color: #FFF;
+    z-index: 0;
+    transform: skewY(3deg);
+}
+
+.profile-card-4:hover img {
+    transform: rotate(5deg) scale(1.1, 1.1);
+    filter: brightness(110%);
+}
+
+.col-md-4{
+    position: relative;
+    left: -170px;
+}
+.social_media a{
+  display: block;
+  width: 40px;
+  background: rgb(46, 31, 26);
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #FFD700;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.navbar{
+    margin-top: -3%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0,0,0,0.3);
+    border-radius: 6px;
+}
+nav{
+    flex: 1;
+    text-align: left;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline;
+    margin-left: 30px;
+}
+li a:hover {
+    background-color: #111;
+    padding: 8px;
+  }
+  nav ul li button
+  {
+      font-size: 20px;
+      color: white;
+      outline: none;
+      border:none;
+      background:transparent;
+      cursor: pointer;
+      font-family: sans-serif;
+      width:110%;
+      height: 35px;
+  
+  }
+  nav ul li button:hover
+  {
+      background-color:rgb(73, 129, 129);
+      border-radius:10px;
+      border-width: 5px;
+      transform: translateY(-2px);
+  }
+</style>
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><button onclick="location.replace('mainpage.html')"class="loginbtn" style="width: auto;">Home</button>
+                    <li><button onclick="location.replace('aboutus.html')"class="loginbtn" style="width: auto;">About Us</button>
+                    <li><button onclick="location.replace('contactform.php')"class="loginbtn" style="width: auto;">Contact Us</button>
+                </ul>
+            </nav>
+        </div>
+        <div class="container text-center">
+    
+            <!-- Logo -->
+            <div class="logo">
+                  <h1><b>ABOUT US</b></h1>
+                  <h4>We are a team of four members. We have built one of the most exciting projects known as E-library.Where students can search for a book,view the soft copy of the book or even and pre-book their particular book which is one of the coolest features of our project.</h4>
+
+            </div>
+    
+            <h1></h1>
+    
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 150px;">
+        <div class="row">
+        
+            <div class="col-md-4">
+        <hr>
+        <div class="profile-card-4 text-center"><img src="ganesh.jpg" class="img img-responsive">
+            <div class="profile-content">
+                <div class="profile-name">Ganesh Kumar
+                    <p>aganeshkumar.18.cse@anits.edu.in</p>
+                </div>
+                <div class="profile-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</div>
+                <div class="row" >
+                    <div class="col-xs-4">
+                        <div class="profile-overview">
+                            <p>FACEBOOK</p>
+                            <a href="#" class="social_media"><em class="fab fa-facebook-f"></em></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="profile-overview">
+                            <p>INSTAGRAM</p>
+                            <a href="#" class="social_media"><em class="fab fa-instagram"></em></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="profile-overview">
+                            <p>FOLLOWING</p>
+                            <a href="#" class="social_media"><em class="fab fa-twitter"></em></a>
+                    </div>
+                    </div>   
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <hr>
+    <div class="profile-card-4 text-center"><img src="pavan.jpg" class="img img-responsive">
+        <div class="profile-content">
+            <div class="profile-name">Pavan Kalyan
+                <p>gpavankalyan.18.cse@anits.edu.in</p>
+            </div>
+            <div class="profile-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</div>
+            <div class="row" >
+                <div class="col-xs-4">
+                    <div class="profile-overview">
+                        <p>FACEBOOK</p>
+                        <a href="#" class="social_media"><em class="fab fa-facebook-f"></em></a>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="profile-overview">
+                        <p>INSTAGRAM</p>
+                        <a href="#" class="social_media"><em class="fab fa-instagram"></em></a>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="profile-overview">
+                        <p>FOLLOWING</p>
+                        <a href="#" class="social_media"><em class="fab fa-twitter"></em></a>
+                </div>
+                </div>   
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-4">
+    <hr>
+    <div class="profile-card-4 text-center"><img src="anil.jpg" class="img img-responsive">
+        <div class="profile-content">
+            <div class="profile-name">Anil Kumar
+                <p>ganilkumar.18.cse@anits.edu.in</p>
+            </div>
+            <div class="profile-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</div>
+            <div class="row" >
+                <div class="col-xs-4">
+                    <div class="profile-overview">
+                        <p>FACEBOOK</p>
+                        <a href="#" class="social_media"><em class="fab fa-facebook-f"></em></a>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="profile-overview">
+                        <p>INSTAGRAM</p>
+                        <a href="#" class="social_media"><em class="fab fa-instagram"></em></a>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="profile-overview">
+                        <p>FOLLOWING</p>
+                        <a href="#" class="social_media"><em class="fab fa-twitter"></em></a>
+                </div>
+                </div>   
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-4" style="margin-left: 100%;margin-top:-62.75% ;">
+    <hr>
+    <div class="profile-card-4 text-center"><img src="jaswanth.jpg" class="img img-responsive">
+        <div class="profile-content">
+            <div class="profile-name">Jaswanth
+                <p>ajaswanth.18.cse@anits.edu.in</p>
+            </div>
+            <div class="profile-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</div>
+            <div class="row" >
+                <div class="col-xs-4">
+                    <div class="profile-overview">
+                        <p>FACEBOOK</p>
+                        <a href="#" class="social_media"><em class="fab fa-facebook-f"></em></a>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="profile-overview">
+                        <p>INSTAGRAM</p>
+                        <a href="#" class="social_media"><em class="fab fa-instagram"></em></a>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="profile-overview">
+                        <p>FOLLOWING</p>
+                        <a href="#" class="social_media"><em class="fab fa-twitter"></em></a>
+                </div>
+                </div>   
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+</body>
+</html>
