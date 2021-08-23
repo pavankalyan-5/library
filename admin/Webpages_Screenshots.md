@@ -1,27 +1,32 @@
 
-### Student Login Page
+### Admin Login Page
 
-![Student_login](https://user-images.githubusercontent.com/63582758/130435449-c5de9c62-d864-4bd1-9ba1-e5cbb33f8b9f.png)
+![Admin_login](https://user-images.githubusercontent.com/63582758/130436650-03197697-2162-4956-b08e-d777232c5a6d.png)
 
-### Student Registration Page
+### Admin Home Page
 
-![Student_registration](https://user-images.githubusercontent.com/63582758/130435528-3e3a9a15-9800-4258-975c-97a6b7faaab9.png)
+![Admin_home](https://user-images.githubusercontent.com/63582758/130436604-24762d2c-f220-4f9c-981b-8ef0e7761420.png)
 
-### Student Home page
+### Add Book Page
 
-![Student_home](https://user-images.githubusercontent.com/63582758/130435374-84f59769-0091-437f-aa4a-87ed69c2b468.png)
+![Add_book](https://user-images.githubusercontent.com/63582758/130436728-9b753553-0c4b-41b1-85da-bf3e5452bbdb.png)
 
-### Search Book Page
+### Delete Book Page
 
-![search_book](https://user-images.githubusercontent.com/63582758/130435595-b770f52e-0f27-4084-9ee9-c55fdf96969c.png)
+![delete_book](https://user-images.githubusercontent.com/63582758/130436769-d2c9d768-05a9-4f49-9c8b-3e3053bbe1b9.png)
 
-### Student Feedback Page
+### Request Page
 
-![feedback](https://user-images.githubusercontent.com/63582758/130435668-92da00ae-7bd5-4a54-845e-7b3d4d88792f.png)
+![Request](https://user-images.githubusercontent.com/63582758/130436829-e5390906-56b7-48cd-bfb9-c1ac1d6f6964.png)
 
-### Student Fine Page
+### Details Page
 
-![fine](https://user-images.githubusercontent.com/63582758/130435708-a2308319-1036-4eb7-bed4-4f7aea24fb6d.png)
+![details](https://user-images.githubusercontent.com/63582758/130436941-4e40e57d-498f-4246-bac9-393a606b59a2.png)
+
+### Profile Page
+
+![Admin_profile](https://user-images.githubusercontent.com/63582758/130437018-da7966fa-7c34-46f0-9e30-94e9f28246c5.png)
+
 
 ### Logout Page
 
